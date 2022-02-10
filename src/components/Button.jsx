@@ -1,6 +1,6 @@
-export default function Button({text, children}) {
+export default function Button({text, fx, children}) {
   return (
-    <button type="button">
+    <button type="button" onClick={fx}>
       {text}
       {children}
     </button>

@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import Button from './components/Button';
 
 function App() {
+  let [count, setCount] = useState(0);
+
+  function addCount() {
+    setCount(count++);
+  }
+
   return (
     <>
-      <h1>Hello World</h1>
-      <Button text="Clique aqui"/>
-      <Button>Click here!</Button>
-      <Button text="Clique ali"/>
-      <Button text="Clique acola"/>
+      <h1>{count}</h1>
+      <Button text="Clique aqui" fx={addCount}/>
     </>
   )
 }
