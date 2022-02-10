@@ -1,8 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from './components/Button';
 
 function App() {
   let [count, setCount] = useState(0);
+
+  useEffect(() => {
+    alert("Iniciou!");
+  }, []);
+
+  useEffect(() => {
+    alert(`Clicou ${count} vezes`);
+  }, [count]);
 
   function addCount() {
     setCount(count + 1);
