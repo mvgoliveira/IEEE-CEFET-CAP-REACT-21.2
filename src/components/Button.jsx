@@ -1,7 +1,8 @@
-export function Button() {
+export default function Button({text, children}) {
   return (
     <button type="button">
-      Clique aqui!
+      {text}
+      {children}
     </button>
   )
 }
