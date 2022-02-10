@@ -5,13 +5,13 @@ function App() {
   let [count, setCount] = useState(0);
 
   function addCount() {
-    setCount(count++);
+    setCount(count + 1);
   }
 
   return (
     <>
       <h1>{count}</h1>
-      <Button text="Clique aqui" fx={addCount}/>
+      <Button text="Clique aqui" fx={() => addCount()}/>
     </>
   )
 }
