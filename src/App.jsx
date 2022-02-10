@@ -1,19 +1,26 @@
-import { useState } from 'react';
+import React from 'react';
 import Button from './components/Button';
 
-function App() {
-  let [count, setCount] = useState(0);
-
-  function addCount() {
-    setCount(count++);
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      count: 0
+    };
   }
 
-  return (
-    <>
-      <h1>{count}</h1>
-      <Button text="Clique aqui" fx={addCount}/>
-    </>
-  )
+  addCount() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+  render () {
+    return (
+      <>
+        <h1>{this.state.count}</h1>
+        <Button text="Clique aqui" fx={() => this.addCount()}/>
+      </>
+    )
+  }
 }
 
 export default App
