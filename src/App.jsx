@@ -1,22 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
-  const [inputText, setInputText] = useState("");
+  const [isActive, setIsActive] = useState(false);
 
-  function handleChange(event) {
-    setInputText(event.target.value);
+  let handleChangeIsActive = () => {
+    setIsActive(!isActive);
   }
-
-  useEffect(() => {
-    console.log(inputText);
-  }, [inputText]);
 
   return (
     <>
-      <p>{inputText}</p>
-      <input type="text" value={inputText} onChange={handleChange} />  
-      <input type="text" onChange={handleChange} />  
-      <button type='button' onClick={() => alert(inputText)}>Clique aqui</button>
+      {isActive ? <div>Está ativo</div> : <div>Não está ativo</div>}
+      <button type='button' onClick={handleChangeIsActive}>{isActive ? "Desativar" : "Ativar"}</button>
     </>
   )
 }
