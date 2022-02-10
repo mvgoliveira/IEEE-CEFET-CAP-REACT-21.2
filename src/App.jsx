@@ -1,25 +1,22 @@
 import { useEffect, useState } from 'react';
-import Button from './components/Button';
 
 function App() {
-  let [count, setCount] = useState(0);
+  const [inputText, setInputText] = useState("");
 
-  useEffect(() => {
-    alert("Iniciou!");
-  }, []);
-
-  useEffect(() => {
-    alert(`Clicou ${count} vezes`);
-  }, [count]);
-
-  function addCount() {
-    setCount(count + 1);
+  function handleChange(event) {
+    setInputText(event.target.value);
   }
+
+  useEffect(() => {
+    console.log(inputText);
+  }, [inputText]);
 
   return (
     <>
-      <h1>{count}</h1>
-      <Button text="Clique aqui" fx={() => addCount()}/>
+      <p>{inputText}</p>
+      <input type="text" value={inputText} onChange={handleChange} />  
+      <input type="text" onChange={handleChange} />  
+      <button type='button' onClick={() => alert(inputText)}>Clique aqui</button>
     </>
   )
 }
