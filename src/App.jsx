@@ -1,18 +1,16 @@
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {Home} from './pages/Home';
+import {About} from './pages/About';
 
 function App() {
-  const [isActive, setIsActive] = useState(false);
-
-  let handleChangeIsActive = () => {
-    setIsActive(!isActive);
-  }
-
   return (
-    <>
-      {isActive ? <div>Está ativo</div> : <div>Não está ativo</div>}
-      <button type='button' onClick={handleChangeIsActive}>{isActive ? "Desativar" : "Ativar"}</button>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="about" element={<About />}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
