@@ -1,6 +1,18 @@
 import { useState } from 'react';
 import Button from './components/Button';
 
+// Ciclo de vida
+// Mounting: Sempre que renderizarmos um componente, o estado do componente tem que ser instanciado
+// unmounting: Quando o componente sair de tela, o estado do componente tem que ser limpado
+
+// Para trabalhar com ciclo de vida, precisamos usar classe ou hooks (nas funções).
+
+// normalmente, as alterações nos valores de variáveis modificados realizados em uma função
+// "desaparecem" quando sai da função que a modificou.  
+
+// Estados são uma maneira de "preservar" valores entre as chamadas de funções.
+// useState é a forma de escrever estados sem usar classe.
+
 function App() {
   let [count, setCount] = useState(0);
 
