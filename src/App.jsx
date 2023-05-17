@@ -7,7 +7,8 @@ function App() {
       <Button text="Clique aqui"/>
       <Button>Click here!</Button>
       <Button text="Clique ali"/>
-      <Button text="Clique acola"/> 
+      <Button text="Clique acola"/>
+      <Button text="Clique"> aqui!</Button>
     </>
 
     // um componente não precisa ter obrigatoriamente todas as propriedades que
