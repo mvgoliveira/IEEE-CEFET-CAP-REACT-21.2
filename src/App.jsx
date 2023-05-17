@@ -8,16 +8,19 @@ import Button from './components/Button';
 // Para trabalhar com ciclo de vida, precisamos usar classe ou hooks (nas funções).
 
 // normalmente, as alterações nos valores de variáveis modificados realizados em uma função
-// "desaparecem" quando sai da função que a modificou.  
+// "desaparecem" quando sai da função que a modificou.
 
 // Estados são uma maneira de "preservar" valores entre as chamadas de funções.
 // useState é a forma de escrever estados sem usar classe.
 
 function App() {
-  let [count, setCount] = useState(0);
+  let count = 0;
+  // let [count, setCount] = useState(0);
 
   function addCount() {
-    setCount(count + 1);
+    count += 1;
+    alert(count);
+    // setCount(count + 1);
   }
 
   return (
