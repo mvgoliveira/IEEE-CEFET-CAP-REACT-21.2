@@ -3,7 +3,7 @@ import Button from './components/Button';
 
 //Estrutura básica de uma classe em React
 class App extends React.Component {
-  //É um metedo especial para inicializar os estados presentes na classe
+  //É um método especial para inicializar os estados presentes na classe
   constructor(props) { 
     //Sempre que uma classe extender alguma coisa, ou seja, estar dentro de uma hierarquia é necessário chamar o "super" e passar o props
     super(props) 
