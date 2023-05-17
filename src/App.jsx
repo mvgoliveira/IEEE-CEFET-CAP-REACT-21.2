@@ -16,8 +16,8 @@ function App() {
   return (
     <>
       <p>{inputText}</p>
-      //Temos um input que recebe o que está em inputText e que executa a função onChange. Essa função é executada sempre que percebe qualquer tipo de mudança
-      //E como ela recebe a função handleChange, sempre que ela perceber alguma mudança handleChange é executada e salva essa mudança no setInputText
+      {/* Temos um input que recebe o que está em inputText e que executa a função onChange. Essa função é executada sempre que percebe qualquer tipo de mudança
+      E como ela recebe a função handleChange, sempre que ela perceber alguma mudança handleChange é executada e salva essa mudança no setInputText */}
       <input type="text" value={inputText} onChange={handleChange} />  
       <input type="text" onChange={handleChange} />  
       <button type='button' onClick={() => alert(inputText)}>Clique aqui</button>
